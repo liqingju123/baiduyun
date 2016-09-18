@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//selenium_test/__init__.py=utf-8
+encoding//selenium_test/login_whit_cookie.py=utf-8
+encoding//selenium_test/request_lib.py=utf-8
