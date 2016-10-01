@@ -3,6 +3,7 @@
 from selenium import webdriver
 from time import sleep
 import os  
+import unittest
 
 # profile_dir=u"/Users/imac/Library/Application Support/Google/Chrome/Default"    # 对应你的chrome的用户数据存放路径  
 # chrome_options=webdriver.ChromeOptions()  
@@ -50,7 +51,6 @@ def add_cookie(browser):
 browser = webdriver.Chrome(executable_path='/Users/imac/Downloads/chromedriver')
 
 browser.get("https://pan.baidu.com/disk/home#list/path=%2F")
-# cookie_baidu ={'Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0':'1473846759','Hm_lpvt_7a3960b6f067eb0085b7f96ff5e660b0':'1473846759','BDUSS':'HpKQ1hjY1MzeXNPY1Z5ajY0M0VsT3Q3SklhZWJYdzUwVjh5RkdjMUMwdnBxZ0JZQVFBQUFBJCQAAAAAAAAAAAEAAAApejtW1eLKx8uttcTLrTEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOkd2VfpHdlXN'}
 add_cookie_whit_url(browser)
 
 
@@ -74,6 +74,8 @@ print browser.get_cookies()
 # browser.save_screenshot('/Users/imac/Downloads/screen.png')
 sleep(2)
 browser.find_element_by_id("h5Input1").send_keys(u'/Users/imac/Downloads/测试脚本.txt')
+sleep(2)
+browser.quit()
 # browser.find_element_by_id('dialog-close').click()
 
 

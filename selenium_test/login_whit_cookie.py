@@ -2,6 +2,8 @@
 
 from selenium import webdriver
 from time import sleep
+from dircache import listdir
+import  os
 #http://pythonscraping.com/pages/cookies/profile.php
 browser = webdriver.Chrome(executable_path='/Users/imac/Downloads/chromedriver')
 browser.get("http://pythonscraping.com/pages/cookies/login.html")
@@ -18,6 +20,7 @@ browser.find_element_by_name('username').send_keys(u'liqingju')
 # sleep(2)
 browser.find_element_by_name('password').clear()
 browser.find_element_by_name('password').send_keys(u'password')
+os.listdir("")
 # sleep(2)
 sumble =browser.find_elements_by_tag_name('input')[2]
 sumble.click()
